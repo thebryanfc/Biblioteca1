@@ -1,0 +1,259 @@
+﻿#menu {
+    background: #000000;
+    height: 70px;
+    border-radius: 50px;
+    border: 1px solid lightcyan;
+}
+
+    #menu ul, #menu li {
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+    }
+
+    #menu ul {
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu li {
+        display: inline-block;
+        position: relative;
+        top: 6px;
+        left: 136x;
+    }
+
+    #menu a {
+        display: block;
+        line-height: 57px;
+        padding: 0 14px;
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+
+        #menu a.dropdown-arrow:after {
+            content: "\23F7";
+            margin-left: 5px;
+        }
+
+    #menu li a:hover {
+        color: #000000;
+        background: #F2F2F2;
+    }
+
+    #menu input {
+        display: none;
+        margin: 0;
+        padding: 0;
+        height: 59px;
+        width: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    #menu label {
+        display: none;
+        line-height: 57px;
+        text-align: center;
+        position: absolute;
+        left: 35px;
+    }
+
+        #menu label:before {
+            font-size: 1.6em;
+            color: #000000;
+            content: "\2261";
+            margin-left: 20px;
+        }
+
+    #menu ul.sub-menus {
+        height: auto;
+        overflow: hidden;
+        width: 170px;
+        background: #444444;
+        position: absolute;
+        z-index: 99;
+        display: none;
+    }
+
+        #menu ul.sub-menus li {
+            display: block;
+            text-align: left;
+            width: 100%;
+        }
+
+        #menu ul.sub-menus a {
+            color: #FFFFFF;
+            font-size: 16px;
+        }
+
+    #menu li:hover ul.sub-menus {
+        display: block;
+    }
+
+    #menu ul.sub-menus a:hover {
+        background: #F2F2F2;
+        color: #444444;
+    }
+
+@media screen and (max-width: 800px) {
+    #menu {
+        position: relative;
+    }
+
+        #menu ul {
+            background: #444444;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: 0;
+            z-index: 3;
+            height: auto;
+            display: none;
+            text-align: left;
+        }
+
+            #menu ul.sub-menus {
+                width: 100%;
+                position: static;
+            }
+
+                #menu ul.sub-menus a {
+                    padding-left: 30px;
+                }
+
+        #menu li {
+            display: block;
+            float: none;
+            width: auto;
+        }
+
+        #menu input, #menu label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+
+        #menu input {
+            z-index: 4;
+        }
+
+            #menu input:checked + label {
+                color: #000000;
+            }
+
+                #menu input:checked + label:before {
+                    content: "\00d7";
+                }
+
+            #menu input:checked ~ ul {
+                display: block;
+            }
+}
+
+body {
+    background-color: lightgray;
+}
+.Consul {
+    background-color: #f9f9f9; /* Fondo claro para el contenedor */
+    border: 1px solid #ddd; /* Borde ligero */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    font-family: 'Arial', sans-serif; /* Tipografía legible */
+}
+
+    .Consul label {
+        display: block; /* Hacer que el label sea un bloque */
+        margin-bottom: 8px; /* Espaciado inferior */
+        font-weight: bold; /* Texto en negrita */
+        color: #333; /* Color del texto */
+    }
+
+    .Consul input[type="text"], .Consul .asp-TextBox {
+        width: calc(100% - 22px); /* Ancho completo menos el padding y borde */
+        padding: 10px; /* Espaciado interno */
+        margin-bottom: 10px; /* Espaciado inferior */
+        border: 1px solid #ccc; /* Borde de la caja de texto */
+        border-radius: 4px; /* Bordes redondeados */
+        font-size: 16px; /* Tamaño de la fuente */
+    }
+
+        .Consul input[type="text"]:focus, .Consul .asp-TextBox:focus {
+            border-color: #007bff; /* Borde azul en foco */
+            outline: none; /* Sin outline */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra sutil en foco */
+        }
+
+    .Consul button, .Consul .asp-Button {
+        display: inline-block; /* Mostrar como un bloque en línea */
+        padding: 10px 20px; /* Espaciado interno */
+        color: #fff; /* Color del texto */
+        background-color: #007bff; /* Color de fondo del botón */
+        border: none; /* Sin borde */
+        border-radius: 4px; /* Bordes redondeados */
+        cursor: pointer; /* Cursor en forma de mano */
+        font-size: 16px; /* Tamaño de la fuente */
+        margin-top: 10px; /* Espaciado superior */
+    }
+
+        .Consul button:hover, .Consul .asp-Button:hover {
+            background-color: #0056b3; /* Color de fondo en hover */
+        }
+
+    .Consul table {
+        width: 100%; /* Ancho completo de la tabla */
+        border-collapse: collapse; /* Colapsar bordes de celda */
+        margin-top: 20px; /* Espaciado superior de la tabla */
+    }
+
+    .Consul th,
+    .Consul td {
+        padding: 10px; /* Espaciado interno de celda */
+        border: 1px solid #ddd; /* Borde ligero de celda */
+        text-align: left; /* Alineación del texto a la izquierda */
+    }
+
+    .Consul th {
+        background-color: #f2f2f2; /* Color de fondo de la fila de encabezado */
+        font-weight: bold; /* Texto en negrita */
+    }
+
+    .Consul td {
+        background-color: #fff; /* Color de fondo de las celdas */
+    }
+
+    .Consul .empty {
+        text-align: center; /* Alinear texto de celda vacía al centro */
+        font-style: italic; /* Texto en cursiva */
+    }
+.btn {
+    background-color: #4CAF50; /* Verde */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Verde más oscuro */
+}
+
+.btn-danger {
+    background-color: #f44336; /* Rojo */
+}
+
+    .btn-danger:hover {
+        background-color: #e53935; /* Rojo más oscuro */
+    }
